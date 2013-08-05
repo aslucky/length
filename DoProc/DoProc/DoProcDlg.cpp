@@ -250,7 +250,7 @@ void CDoProcDlg::OnBnClickedBtnBrowse()
 		return;
 	}
 	float value = 0;
-	int iCount = 0;
+	int iCount = 0,lineCount = 2;
 	char bufTmp[100] = {'\0'};
 	//0 is +,1 is -,2 is *,3 is /
 	int iSign = -1;
@@ -342,8 +342,15 @@ void CDoProcDlg::OnBnClickedBtnBrowse()
 					{
 						//only transform
 						fResult = atof(vBuf[m].c_str()) * atof(rules[j].value.c_str());
-						skip_result:
-						sprintf( bufTmp, "%.02f m\n", fResult ); //for float use %f
+skip_result:
+						++lineCount;
+						if ( lineCount == 12 )
+						{
+							sprintf( bufTmp, "%.02f m", fResult ); //for float use %f
+						}else
+						{
+							sprintf( bufTmp, "%.02f m\n", fResult ); //for float use %f
+						}
 						strTmp = &bufTmp[0];
 						iRet = fwrite(strTmp.c_str(),1,strTmp.size(),fp);
 						if ( iRet != strTmp.size() )

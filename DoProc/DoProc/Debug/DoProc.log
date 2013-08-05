@@ -1,4 +1,4 @@
-﻿Build started 2013/8/4 22:33:16.
+﻿Build started 2013/8/5 21:04:03.
      1>Project "C:\Users\Tyler\Documents\GitHub\length\DoProc\DoProc\DoProc.vcxproj" on node 2 (clean target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\DoProc.lastbuildstate".
@@ -6,4 +6,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:00.02
